@@ -24,7 +24,15 @@ export default function Home() {
   const { loading, sendEmail } = useEmailSender();
 
   const handleSubmit = async () => {
-    await sendEmail(inputs, subject, description, sendTime);
+    try {
+      await sendEmail(inputs, subject, description, sendTime);
+      setInputs([""]);
+      setSubject("");
+      setDescription("");
+      setSendTime("");
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <Dialog open>
