@@ -58,6 +58,7 @@ export default function Home() {
             <Label>Message</Label>
             <Textarea 
               placeholder="Enter your message here." 
+              value={description}
               onChange={(e) => setDescription(e.target.value)} 
             />
             <Label>Schedule Send Time</Label>
