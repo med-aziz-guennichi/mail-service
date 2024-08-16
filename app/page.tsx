@@ -26,7 +26,6 @@ export default function Home() {
   const handleSubmit = async () => {
     await sendEmail(inputs, subject, description, sendTime);
   };
-
   return (
     <Dialog open>
     <DialogTrigger asChild>
@@ -102,7 +101,7 @@ export default function Home() {
         </div>
       </div>
       <DialogFooter>
-        <Button disabled={loading} onClick={handleSubmit}>
+        <Button disabled={loading || inputs.join(", ").toString().length === 0 || subject === "" || description === ""} onClick={handleSubmit}>
           {loading ? (
             <>
               <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
