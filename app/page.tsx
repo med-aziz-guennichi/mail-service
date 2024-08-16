@@ -35,7 +35,7 @@ export default function Home() {
       <DialogHeader>
         <DialogTitle>Compose Email</DialogTitle>
         <DialogDescription>
-          Fill in the details below to send an email. Click send when you're ready.
+          Fill in the details below to send an email. Click send when you&apos;re ready.
         </DialogDescription>
       </DialogHeader>
       <div className="grid gap-4 py-4">
